@@ -24,7 +24,6 @@
 </div>
 
 <!--
-
     Now that's the core element used by impress.js.
 
     That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
@@ -42,12 +41,10 @@
 
     But as I said, you won't need it for now, so don't worry - there are some simple but interesing things
     right around the corner of this tag ;)
-
 -->
 <div id="impress">
 
     <!--
-
         Here is where interesting thing start to happen.
 
         Each step of the presentation should be an element inside the `#impress` with a class name
@@ -61,14 +58,12 @@
         will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
 
         It will not be rotated or scaled.
-
     -->
     <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
         <q>Aren't you just <b>bored</b> with all those slides-based presentations?</q>
     </div>
 
     <!--
-
         The `id` attribute of the step element is used to identify it in the URL, but it's optional.
         If it is not defined, it will get a default value of `step-N` where N is a number of slide.
 
@@ -80,7 +75,6 @@
 
         Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
         Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
-
     -->
     <div class="step slide" data-x="0" data-y="-1500">
         <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
@@ -91,14 +85,12 @@
     </div>
 
     <!--
-
         This is an example of step element being scaled.
 
         Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
         element will be 4 times larger than the others.
         From presentation and transitions point of view it means, that it will have to be scaled
         down (4 times) to make it back to its correct size.
-
     -->
     <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
         <span class="try">then you should try</span>
@@ -107,12 +99,10 @@
     </div>
 
     <!--
-
         This element introduces rotation.
 
         Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
         element should be rotated by 90 degrees clockwise.
-
     -->
     <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
         <p>It's a <strong>presentation tool</strong> <br/>
@@ -125,13 +115,11 @@
     </div>
 
     <!--
-
         And now it gets really exciting! We move into third dimension!
 
         Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
         `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
         positioned far away from us (by 3000px).
-
     -->
     <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
         <p>and <b>tiny</b> ideas</p>
