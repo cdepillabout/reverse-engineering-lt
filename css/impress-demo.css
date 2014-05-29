@@ -180,6 +180,10 @@ a:focus {
     line-height: 1.5;
 }
 
+.step.wide {
+    width: 1200px;
+}
+
 /*
     ... and we enhance the styles for impress.js.
 
@@ -286,6 +290,11 @@ a:focus {
     /*margin-top: 100px;*/
 	text-align: center;
 	vertical-align: center;
+}
+
+.problem pre {
+    font-size: 32px;
+    line-height: 48px;
 }
 
 /*

@@ -72,13 +72,25 @@
 			</div>
     </div>
 
-    <div class="step problem" data-x="-3000" data-y="5000" data-rotate="90" data-scale="5">
+    <div class="step wide problem" data-x="-3000" data-y="5000" data-rotate="90" data-scale="5">
 			<div class="centerdiv">
 				<h2>問題①</h2>
 				<p>以下のファイルがあります。どういうファイルか知りたいとき、<b>何のコマンド</b>を使いますか。</p>
-				<pre><code class="bash">$ ls what what</code>
-here is some non highlighted text
-<code class="bash">$ cd what && ls</code></pre>
+				<pre><code class="bash">$ ls -l crackme</code>
+-rwx------ 1 me user 8293 May 29 12:19 crackme
+<code class="bash">$</code></pre>
+			</div>
+    </div>
+
+    <div class="step wide problem" data-x="-6000" data-y="5000" data-rotate="90" data-scale="5">
+			<div class="centerdiv">
+				<h2>答え①</h2>
+				<p style="text-align: center; color: blue;"><strong>file</strong></p>
+				<pre><code class="bash">$ file crackme</code>
+crackme: ELF 64-bit LSB executable, x86-64, version 1 (SYSV),
+dynamically linked (uses shared libs), for GNU/Linux 2.6.26, not stripped
+<code class="bash">$</code></pre>
+				<!-- 実行可能ファイル！！ -->
 			</div>
     </div>
 
