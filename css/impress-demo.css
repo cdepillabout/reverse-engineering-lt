@@ -247,6 +247,11 @@ a:focus {
 	text-align: center;
 }
 
+.step pre {
+	background: #3f3f3f;
+	color: #fcfcfc;
+}
+
 .centerdiv-in-slide {
 	margin: auto;
 	position: absolute;
