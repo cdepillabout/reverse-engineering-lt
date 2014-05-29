@@ -16,7 +16,9 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="css/highlight-zenburn.css">
+		<link rel="stylesheet" href="css/highlight-default.min.css">
+		<script src="js/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body class="impress-not-supported">
@@ -70,7 +72,7 @@
 			<div class="centerdiv">
 				<h2>問題①</h2>
         <p>以下のファイルがあります。どういうファイルか知りたいとき、何のコマンドを使いますか。</p>
-				<pre><code class="sh">$ ls what what
+				<pre><code class="bash">$ ls what what
 $ cd what && ls </code></pre>
 			</div>
     </div>
@@ -199,7 +201,6 @@ if ("ontouchstart" in document.documentElement) {
 -->
 <script src="js/impress.js"></script>
 <script>impress().init();</script>
-<script src="js/highlight.js"></script>
 
 <!--
 
