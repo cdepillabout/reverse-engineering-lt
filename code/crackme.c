@@ -1,4 +1,9 @@
 
+/**************************************
+ * This can be compiled like below.
+ * $ gcc crackme.c -o crackme
+ */
+
 #include <stdio.h>
 #include <string.h>
 
