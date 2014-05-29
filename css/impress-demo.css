@@ -207,7 +207,7 @@ a:focus {
     They cover everything what you see on first three steps of the demo.
 */
 .slide {
-    display: block;
+    /*display: block;*/
 
     width: 900px;
     height: 700px;
@@ -247,7 +247,7 @@ a:focus {
 	text-align: center;
 }
 
-.centerdiv {
+.centerdiv-in-slide {
 	margin: auto;
 	position: absolute;
 	top: 0;
@@ -255,6 +255,12 @@ a:focus {
 	bottom: 0;
 	right: 0;
 	height: 50%;
+}
+
+.centerdiv {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .title h1 {
