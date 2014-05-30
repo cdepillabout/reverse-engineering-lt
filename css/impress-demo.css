@@ -430,18 +430,19 @@ a:focus {
 /*
     ... and 'scaling' to scale down after another quarter of a second.
 */
-#ing.present .scaling {
-    -webkit-transform: scale(0.7);
-    -moz-transform:    scale(0.7);
-    -ms-transform:     scale(0.7);
-    -o-transform:      scale(0.7);
-    transform:         scale(0.7);
+.scaling {
+    display: inline-block;
+    -webkit-transform: scale(1.1);
+    -moz-transform:    scale(1.1);
+    -ms-transform:     scale(1.1);
+    -o-transform:      scale(1.1);
+    transform:         scale(1.1);
 
-    -webkit-transition-delay: 0.5s;
-    -moz-transition-delay:    0.5s;
-    -ms-transition-delay:     0.5s;
-    -o-transition-delay:      0.5s;
-    transition-delay:         0.5s;
+    -webkit-transition-delay: 1.0s;
+    -moz-transition-delay:    1.0s;
+    -ms-transition-delay:     1.0s;
+    -o-transition-delay:      1.0s;
+    transition-delay:         1.0s;
 }
 
 /*
