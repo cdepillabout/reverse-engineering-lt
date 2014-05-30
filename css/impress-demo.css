@@ -280,29 +280,30 @@ a:focus {
 */
 
 .title h1 {
-    display: block;
-    font-size: 100px;
-    line-height: 100px;
+	display: block;
+	font-size: 100px;
+	line-height: 100px;
 
-    /*margin-top: 100px;*/
+	/*margin-top: 100px;*/
 	text-align: center;
 	vertical-align: center;
 }
 
 .problem h2 {
-    display: block;
-    font-size: 72px;
-    line-height: 100px;
+	display: block;
+	font-size: 72px;
+	line-height: 100px;
 
-    /*margin-top: 100px;*/
+	margin-bottom: 30px;
 	text-align: center;
 	vertical-align: center;
 }
 
 .problem pre {
-    font-size: 32px;
-    line-height: 48px;
+	font-size: 32px;
+	line-height: 48px;
 	padding: 10px;
+	margin-top: 10px;
 }
 
 /*
