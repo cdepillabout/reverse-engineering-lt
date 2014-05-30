@@ -184,6 +184,10 @@ a:focus {
     width: 1200px;
 }
 
+.step.verywide {
+    width: 1400px;
+}
+
 /*
     ... and we enhance the styles for impress.js.
 
@@ -254,6 +258,7 @@ a:focus {
 .step pre {
 	background: #3f3f3f;
 	color: #fcfcfc;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .centerdiv-in-slide {

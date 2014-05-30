@@ -82,13 +82,15 @@
 			</div>
     </div>
 
-    <div class="step wide problem" data-x="-6000" data-y="5000" data-rotate="90" data-scale="5">
+    <div class="step problem" data-x="-6000" data-y="5000" data-rotate="90" data-scale="5">
 			<div class="centerdiv">
 				<h2>答①</h2>
 				<p style="text-align: center; color: blue;"><strong>file</strong></p>
 				<pre><code class="bash">$ file crackme</code>
-crackme: ELF 64-bit LSB executable, x86-64, version 1 (SYSV),
-dynamically linked (uses shared libs), for GNU/Linux 2.6.26, not stripped
+crackme: ELF 64-bit LSB executable x86-64,
+version 1 (SYSV), dynamically linked (uses
+shared libs), for GNU/Linux 2.6.26, not
+stripped
 <code class="bash">$</code></pre>
 				<!-- 実行可能ファイル！！ -->
 			</div>
@@ -115,7 +117,7 @@ Incorrect... :-(
     <div class="step problem" data-x="11500" data-y="-850" data-rotate="270" data-scale="5">
 			<div class="centerdiv">
 				<h2>問②</h2>
-				<p>勝手な推測ですが、もしかして、求められているパスコードが、この実行可能ファイル内で定義されている文字列の可能性はある。</p>
+				<p>もしかして、求められているパスコードが、この実行可能ファイル内で定義されている文字列の可能性はある。</p>
 				<p>実行可能ファイル内の<span style="color: blue;"><b>表示可能な文字列</b></span>を表示するコマンドは何ですか？</p>
 			</div>
     </div>
@@ -135,6 +137,46 @@ thisisthepasscode
 You are correct!!! :-)
 Incorrect... :-(
 <code class="bash">$</code></pre>
+			</div>
+    </div>
+
+    <div class="step problem" data-x="-3500" data-y="11000" data-rotate="0" data-scale="7">
+			<div class="centerdiv">
+				<h2>問題③</h2>
+				<p>もしかして、入力するパスコードが内部で定義されているパスコードと比較されている可能性はある。</p>
+				<p>普段は、glibcで定義されているstrcmpを使って文字列を比較する。</p>
+				<p>共有ライブラリ（例えばglibc）の<span style="color: blue;"><b>関数呼び出しをトレース</b></span>できるコマンドは何ですか？</p>
+			</div>
+    </div>
+
+    <div class="step problem wide" data-x="-3500" data-y="17000" data-rotate="0" data-scale="7">
+			<div class="centerdiv">
+				<h2>答③</h2>
+				<p style="text-align: center; color: blue;"><strong>ltrace</strong></p>
+				<pre><code class="bash">$ ltrace crackme</code>
+fwrite("enter the passcode: ", 1, 20, 0x7f1231) = 20
+fflush(0x7f1231)                                = 0
+fgets("hogehogehoge", 831250, 0x7fff1)          = 0x7fff1
+strchr("hogehogehoge\n", '\n')                  = "\n"
+<span style="color: lightblue;"><b>strcmp("hogehogehoge", "thisisthepasscode")</b></span>     = -12
+puts("Incorrect...")                            = 17
+<code class="bash">$</code></pre>
+			</div>
+    </div>
+
+    <div class="step problem" data-x="0" data-y="-6000" data-rotate="90" data-scale="7">
+			<div class="centerdiv">
+				<h2>thisisthepasscode</h2>
+				<pre><code class="bash">$ ./crackme</code>
+enter the passcode: thisisthepasscode
+<b>You are correct!!! :-)</b>
+<code class="bash">$</code></pre>
+			</div>
+    </div>
+
+    <div class="step problem" data-x="-100000" data-y="-100000" data-rotate="0" data-scale="2000">
+			<div class="centerdiv">
+				<p style="text-align: center; font-size: 190px;">owari</p>
 			</div>
     </div>
 
@@ -189,10 +231,12 @@ Incorrect... :-(
         as `data-rotate` (these two are basically aliases).
 
     -->
+		<!--
     <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
         <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
         <span class="footnote">* beat that, prezi ;)</span>
     </div>
+		-->
 
     <!--
 
@@ -209,9 +253,6 @@ Incorrect... :-(
         CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
 
     -->
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
-    </div>
-
 </div>
 
 <!--
