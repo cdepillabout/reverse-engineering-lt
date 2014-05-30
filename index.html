@@ -72,12 +72,12 @@
 			</div>
     </div>
 
-    <div class="step wide problem" data-x="-3000" data-y="5000" data-rotate="90" data-scale="5">
+    <div class="step problem" data-x="-3000" data-y="5000" data-rotate="90" data-scale="5">
 			<div class="centerdiv">
 				<h2>問①</h2>
 				<p>以下のファイルがあります。どういうファイルか知りたいとき、<b>何のコマンド</b>を使いますか。</p>
 				<pre><code class="bash">$ ls -l crackme</code>
--rwx------ 1 me user 8293 May 29 12:19 crackme
+-rwx------ 1 me user 8293 May 29 crackme
 <code class="bash">$</code></pre>
 			</div>
     </div>
@@ -149,17 +149,17 @@ Incorrect... :-(
 			</div>
     </div>
 
-    <div class="step problem wide" data-x="-3500" data-y="17000" data-rotate="0" data-scale="7">
+    <div class="step problem" data-x="-3500" data-y="17000" data-rotate="0" data-scale="7">
 			<div class="centerdiv">
 				<h2>答③</h2>
 				<p style="text-align: center; color: blue;"><strong>ltrace</strong></p>
 				<pre><code class="bash">$ ltrace crackme</code>
-fwrite("enter the passcode: ", 1, 20, 0x7f1231) = 20
-fflush(0x7f1231)                                = 0
-fgets("hogehogehoge", 831250, 0x7fff1)          = 0x7fff1
-strchr("hogehogehoge\n", '\n')                  = "\n"
-<span style="color: lightblue;"><b>strcmp("hogehogehoge", "thisisthepasscode")</b></span>     = -12
-puts("Incorrect...")                            = 17
+fwrite("enter passcode: ", 1, 20, 0x7f123)
+fflush(0x7f123)
+fgets("hogehoge", 831250, 0x7fff1)
+strchr("hogehoge\n", '\n')
+<span style="color: lightblue;"><b>strcmp("hogehoge", "thisisthepasscode")</b></span>
+puts("Incorrect...")
 <code class="bash">$</code></pre>
 			</div>
     </div>
