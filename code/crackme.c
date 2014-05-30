@@ -9,7 +9,7 @@
 
 void getStringFromUser(char *text, unsigned int size)
 {
-	fputs("enter some text: ", stdout);
+	fputs("enter the passcode: ", stdout);
 	fflush(stdout);
 	if ( fgets(text, size, stdin) != NULL )
 	{
@@ -22,21 +22,15 @@ void getStringFromUser(char *text, unsigned int size)
 }
 
 int main() {
-	char *password1 = "thisis";
-	char *password2 = "thepassword";
-	char combinedPasswords[100] = "";
+	char *passcode = "thisisthepasscode";
 	char textFromUser[100];
 
 	getStringFromUser(textFromUser, sizeof textFromUser);
 
-	// combine passwords
-	strcpy (combinedPasswords, password1);
-	strcat (combinedPasswords, password2);
-
-	if (strcmp(textFromUser, combinedPasswords) == 0) {
-		printf("\nYou are correct!!! :-)\n");
+	if (strcmp(textFromUser, passcode) == 0) {
+		printf("You are correct!!! :-)\n");
 	} else {
-		printf("\nIncorrect... :-(\n");
+		printf("Incorrect... :-(\n");
 	}
 
 	return 0;

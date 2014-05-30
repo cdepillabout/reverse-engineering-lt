@@ -74,7 +74,7 @@
 
     <div class="step wide problem" data-x="-3000" data-y="5000" data-rotate="90" data-scale="5">
 			<div class="centerdiv">
-				<h2>問題①</h2>
+				<h2>問①</h2>
 				<p>以下のファイルがあります。どういうファイルか知りたいとき、<b>何のコマンド</b>を使いますか。</p>
 				<pre><code class="bash">$ ls -l crackme</code>
 -rwx------ 1 me user 8293 May 29 12:19 crackme
@@ -84,13 +84,57 @@
 
     <div class="step wide problem" data-x="-6000" data-y="5000" data-rotate="90" data-scale="5">
 			<div class="centerdiv">
-				<h2>答え①</h2>
+				<h2>答①</h2>
 				<p style="text-align: center; color: blue;"><strong>file</strong></p>
 				<pre><code class="bash">$ file crackme</code>
 crackme: ELF 64-bit LSB executable, x86-64, version 1 (SYSV),
 dynamically linked (uses shared libs), for GNU/Linux 2.6.26, not stripped
 <code class="bash">$</code></pre>
 				<!-- 実行可能ファイル！！ -->
+			</div>
+    </div>
+
+    <div class="step problem" data-x="3500" data-y="-850" data-rotate="270" data-scale="5">
+			<div class="centerdiv">
+				<h2>実行してみる</h2>
+				<pre><code class="bash">$ ./crackme</code>
+enter the passcode: </pre>
+			</div>
+    </div>
+
+    <div class="step problem" data-x="7500" data-y="-850" data-rotate="270" data-scale="5">
+			<div class="centerdiv">
+				<h2>パスコードを入れてみる</h2>
+				<pre><code class="bash">$ ./crackme</code>
+enter the passcode: hogehogehoge
+Incorrect... :-(
+<code class="bash">$</code></pre>
+			</div>
+    </div>
+
+    <div class="step problem" data-x="11500" data-y="-850" data-rotate="270" data-scale="5">
+			<div class="centerdiv">
+				<h2>問②</h2>
+				<p>勝手な推測ですが、もしかして、求められているパスコードが、この実行可能ファイル内で定義されている文字列の可能性はある。</p>
+				<p>実行可能ファイル内の<span style="color: blue;"><b>表示可能な文字列</b></span>を表示するコマンドは何ですか？</p>
+			</div>
+    </div>
+
+    <div class="step problem" data-x="16500" data-y="-850" data-rotate="270" data-scale="5">
+			<div class="centerdiv">
+				<h2>答②</h2>
+				<p style="text-align: center; color: blue;"><strong>strings</strong></p>
+				<pre><code class="bash">$ strings crackme</code>
+/lib64/ld-linux-x86-64.so.2
+DD[u
+__gmon_start__
+fflush
+...
+enter the passcode:
+thisisthepasscode
+You are correct!!! :-)
+Incorrect... :-(
+<code class="bash">$</code></pre>
 			</div>
     </div>
 
@@ -114,6 +158,7 @@ dynamically linked (uses shared libs), for GNU/Linux 2.6.26, not stripped
         Only one current step has the `present` class.
 
     -->
+		<!--
     <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
         <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
     </div>
@@ -131,6 +176,7 @@ dynamically linked (uses shared libs), for GNU/Linux 2.6.26, not stripped
         <p>one more thing...</p>
     </div>
 
+		-->
     <!--
 
         And the last one shows full power and flexibility of impress.js.
